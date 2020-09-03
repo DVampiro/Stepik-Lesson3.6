@@ -16,5 +16,7 @@ def test_select_language(browser, pause_select):
     print(f'Выбран язык: {lang}\nТекст на кнопке: {button[0].text}')
 
     if button[0].text == 'Ajouter au panier' or pause_select:
+        if not pause_select:
+            pause_select = 10  # Принудительное включение для французского
         print(f'Включена автопауза на {pause_select} секунд')
         time.sleep(int(pause_select))
