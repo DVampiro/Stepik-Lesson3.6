@@ -11,7 +11,7 @@ def pytest_addoption(parser):
 
 # Включение паузы через командную строку
 @pytest.fixture(scope="function")
-def pause_select(request):
+def pause_time(request):
     pause_mode = request.config.getoption("pause")
     return pause_mode
 
