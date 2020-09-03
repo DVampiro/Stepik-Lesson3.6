@@ -4,7 +4,7 @@ import time
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 
-def test_select_language(browser, pause_select):
+def test_find_button_and_select_language(browser, pause_select):
     browser.get(link)
     browser.implicitly_wait(5)  # На случай задержек
     button = browser.find_elements_by_class_name("btn-add-to-basket")
